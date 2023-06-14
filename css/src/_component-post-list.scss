@@ -1,0 +1,25 @@
+
+
+.post-list-title {
+    @include padding;
+    text-transform: uppercase;
+
+    h2 {
+        font-size: 3.2em;
+        border: 3px solid;
+        border-image: url(../img/border-mask-navy.png) 15 24;
+        padding: 15px 30px 25px;
+        color: $navy;
+        text-align: center;
+    }
+}
+
+.post-list {
+    @include padding;
+}
+
+.post-list-container {
+    &.grey {
+        background: lighten( $grey, 35% );
+    }
+}

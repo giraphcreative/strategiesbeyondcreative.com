@@ -1,0 +1,167 @@
+
+.slides {
+    transition: all 500ms ease-in-out;
+    position: relative;
+    height: 350px;
+    
+    @include respond-to( $bp-m ) { height: 400px; }
+    @include respond-to( $bp-l ) { height: 450px; }
+    @include respond-to( $bp-xl ) { height: 550px; }
+    @include respond-to( $bp-xxl ) { height: 650px; }
+
+    .slide {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: all 500ms ease-in-out;
+        background: center center / cover no-repeat;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        z-index: 0;
+
+        &:before {
+            content: '';
+            position: absolute;
+            bottom: 40px;
+            height: 10px;
+            left: 0;
+            right: 0;
+            background: url(../img/accent-all.png) center center no-repeat;
+            background-size: cover;
+            z-index: 101;
+
+            @include respond-to( $bp-xl ) {
+                bottom: 70px;
+            }
+
+            @include respond-to( $bp-xxl ) {
+                bottom: 110px;
+            }
+        }
+
+        &.accent-grey-navy:before {
+            background: url(../img/accent-grey-navy.png) center center no-repeat;
+        }
+
+        &.accent-purple-navy:before {
+            background: url(../img/accent-purple-navy.png) center center no-repeat;
+        }
+
+        &.accent-cyan-navy:before {
+            background: url(../img/accent-cyan-navy.png) center center no-repeat;
+        }
+
+        &.visible {
+            z-index: 1;
+            opacity: 1;
+        }
+
+        img {
+            position: relative;
+            visibility: hidden;
+            z-index: 0;
+            display: block;
+        }
+
+        .slide-content {
+            position: absolute;
+            z-index: 100;
+            bottom: 0;
+            right: 20%;
+            left: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            padding: 40px;
+            @include respond-to( $bp-l ) { padding: 30px 80px; }
+            @include respond-to( $bp-xl ) { padding: 35px 120px; }
+            background: linear-gradient( 90deg, rgba( $navy, .9 ) 0%, rgba( $navy, 0 ) 100% );
+        
+            @include respond-to( $bp-m ) {
+                right: 50%;
+            }
+
+            .slides-content-inner {
+                flex: 1;
+            }
+
+            h1, h2, h3 {
+                font-size: 2.3em;
+                line-height: 1.1em;
+                text-transform: uppercase;
+                text-shadow: 0 0 15px rgba( black, .2 );
+                color: white;
+                @include font-bold;
+
+                @include respond-to( $bp-m ) {
+                    font-size: 2.8em;
+                }
+
+                @include respond-to( $bp-l ) {
+                    font-size: 3.6em;
+                }
+
+                @include respond-to( $bp-xl ) {
+                    font-size: 4.3em;
+                }
+            }
+
+            p {
+                font-size: 1.1em;
+                line-height: 1.2em;
+                text-shadow: 0 0 15px rgba( black, .2 );
+                color: white;
+
+                @include respond-to( $bp-l ) {
+                    font-size: 1.3em;
+                    line-height: 1.3em;
+                }
+            }
+        }
+    }
+
+    .slides-nav a {
+		position: absolute;
+		top: 50%;
+		cursor: pointer;
+		text-indent: -300px;
+		overflow: hidden;
+		opacity: .7;
+		color: black;
+        z-index: 2;
+
+        width: 25px;
+    	height: 40px;
+        margin-top: -20px;
+
+        @include respond-to( $bp-l ) {
+            width: 35px;
+            height: 50px;
+            margin-top: -25px;
+        }
+
+		&:hover {
+			opacity: 1;
+		}
+
+		&.previous {
+			background: transparent url(../img/slider-arrow-left.png) right center / contain no-repeat;
+			border-top-left-radius: 0;
+			border-bottom-left-radius: 0;
+
+            left: 5px;
+            @include respond-to( $bp-l ) { left: 20px; }
+		}
+
+		&.next {
+			background: transparent url(../img/slider-arrow-right.png) left center/ contain no-repeat;
+			border-top-right-radius: 0;
+			border-bottom-right-radius: 0;
+
+			right: 5px;
+            @include respond-to( $bp-l ) { right: 20px; }
+		}
+	}
+}

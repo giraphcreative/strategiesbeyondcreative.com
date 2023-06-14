@@ -1,0 +1,42 @@
+
+
+footer {
+	@include clearfix;
+	@include padding;
+	background: $navy url(../img/bg-graph-white.svg) center center / cover no-repeat;
+	color: white;
+	line-height: 1.5em;
+
+	@include respond-to( $bp-xl ) {
+		@include padding-side( 40px, 60px )
+	}
+
+	a {
+		color: white;
+	}
+
+	.copyright {
+		color: rgba( white, .5 );
+	}
+
+	@include respond-to( $bp-m ) {
+		display: flex;
+
+		.column {
+			flex: 1;
+
+			&.menu {
+				border-left: 1px solid white;
+				padding-left: 20px;
+			}
+
+			.nav-menu {
+				a {
+					display: block;
+					padding: 4px 10px;
+				}
+			}
+		}
+	}
+}
+

@@ -1,0 +1,63 @@
+
+
+.image-text {
+    @include padding;
+    display: flex;
+    align-items: center;
+
+    &.left-top, &.right-top {
+        align-items: start;
+    }
+
+    &.right, &.right-top {
+        flex-direction: row-reverse;
+        
+        .image-text-image  {
+            margin: 0 3%;
+        }
+    }
+
+    &.grey {
+        background: lighten( $grey, 35% );
+    }
+
+    &.grey-schematic {
+        background: $grey url(../img/bg-graph-white.svg) center center / cover no-repeat;
+
+        h1, h2, h3, h4, h5, h6, p, li {
+            color: white;
+        }
+    }
+
+    &.white.circular {
+        .image-text-image-frame {
+            border: 10px solid lighten( $grey, 15% );
+        }
+    }
+
+    &.grey-schematic.circular {
+        .image-text-image-frame {
+            border: 10px solid $navy;
+        }
+    }
+
+    .image-text-image  {
+        flex: 0 0 27%;
+        margin: 0 6% 0 0;
+
+        img {
+            display: block;
+        }
+    }
+
+    &.circular .image-text-image-frame {
+        border: 10px solid white;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+
+    .image-text-content {
+        flex: 0 0 67%;
+    }
+}
+
