@@ -1,7 +1,7 @@
 
 
 .blockquote {
-    @include padding;
+    @include padding-side( 60px, 60px );
     color: white;
 
     &.image {
@@ -20,8 +20,13 @@
     }
 
     &.grey {
-        background-color: $grey;
+        background: $grey url(../img/bg-graph-grey.svg) center center / cover no-repeat;
+        background-attachment: fixed;
         color: white;
+    }
+
+    &.photo {
+        background: $grey center center / cover no-repeat;
     }
     
     .column-image {
@@ -39,6 +44,7 @@
     p {
         color: rgba( white, .7 );
         padding: 6px 0 0 0;
+        font-size: 1.2em;
     }
 
     h1 {
@@ -46,11 +52,11 @@
     }
 
     h1, h2 {
-        font-size: 1.5em;
+        font-size: 2.4em;
     }
 
     h3, h4 {
-        font-size: 1.2em;
+        font-size: 2.1em;
     }
 }
 

@@ -3,7 +3,7 @@
 
 // include components
 require_multi( 
-    'component/slides', 'component/title', 'component/content', 'component/content-two', 'component/icons', 'component/separator', 'component/people-photos', 'component/people',
+    'component/slides', 'component/title', 'component/content', 'component/content-two', 'component/icons', 'component/blockquote', 'component/separator', 'component/people-photos', 'component/people',
     'component/button-columns', 'component/accordions', 'component/post-list', 'component/image-text',  'component/spacer' );
 
 

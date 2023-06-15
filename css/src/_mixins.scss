@@ -34,7 +34,7 @@
 	padding: 30px;
 	@include respond-to( $bp-l ) { padding: 30px 50px; }
 	@include respond-to( $bp-xl ) { padding: 35px 70px; }
-	@include respond-to( $bp-xxl ) { padding: 35px 90px; }
+	@include respond-to( $bp-xxl ) { padding: 45px 90px; }
 }
 
 @mixin padding-side( $top: 0, $bottom: 0 ) {

@@ -2,8 +2,11 @@
 
 .image-text {
     @include padding;
-    display: flex;
-    align-items: center;
+
+    @include respond-to( $bp-s ) {
+        display: flex;
+        align-items: center;
+    }
 
     &.left-top, &.right-top {
         align-items: start;
@@ -23,6 +26,7 @@
 
     &.grey-schematic {
         background: $grey url(../img/bg-graph-white.svg) center center / cover no-repeat;
+        background-attachment: fixed;
 
         h1, h2, h3, h4, h5, h6, p, li {
             color: white;
@@ -30,6 +34,9 @@
     }
 
     &.white.circular {
+        background: white url(../img/bg-graph-grey.svg) center center / cover no-repeat;
+        background-attachment: fixed;
+
         .image-text-image-frame {
             border: 10px solid lighten( $grey, 15% );
         }

@@ -7,15 +7,26 @@
         margin-right: -3%;
     }
 
+    @include respond-to( $bp-xl ) {
+        margin-right: -5%;
+    }
+
     .entry {
+        margin-bottom: 3%;
+
         @include respond-to( $bp-s ) {
-            flex: 0 0 50%;
+            flex: 0 0 47%;
             margin: 0 3% 3% 0;
         }
 
         @include respond-to( $bp-m ) {
             flex: 0 0 30%;
             margin: 0 3% 3% 0;
+        }
+
+        @include respond-to( $bp-xl ) {
+            flex: 0 0 28%;
+            margin: 0 5% 3% 0;
         }
 
         .entry-thumbnail {
